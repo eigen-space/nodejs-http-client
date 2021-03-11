@@ -1,7 +1,7 @@
-import { Response } from 'node-fetch';
+import { Blob, Response } from 'node-fetch';
 import { ContentType, HttpStatusCode, RequestProviderResponse } from '@eigenspace/base-http-client';
 
-export class NodejsProviderResponse<T> extends RequestProviderResponse<Response, T> {
+export class NodejsProviderResponse<T> extends RequestProviderResponse<T, Response> {
 
     get status(): HttpStatusCode | number {
         return this.nativeResponse.status;
@@ -13,5 +13,9 @@ export class NodejsProviderResponse<T> extends RequestProviderResponse<Response,
 
     protected json(): Promise<T> {
         return this.nativeResponse.json();
+    }
+
+    protected async blob(): Promise<Blob> {
+        return this.nativeResponse.blob();
     }
 }

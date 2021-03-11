@@ -1,8 +1,8 @@
-export { NodejsHttpClient } from './components/nodejs-http-client/nodejs-http-client';
+export * from './components';
 export {
     CommonQueryProps,
     QueryProvider,
     BaseHttpClientDecorator,
-    UrlReplacer,
-    UrlProcessor
+    UrlProcessor,
+    Blob
 } from '@eigenspace/base-http-client';
