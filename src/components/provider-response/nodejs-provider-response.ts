@@ -1,5 +1,5 @@
 import { Blob, Response } from 'node-fetch';
-import { ContentType, HttpStatusCode, RequestProviderResponse } from '@eigenspace/base-http-client';
+import { ContentType, HttpStatusCode, RequestProviderResponse, StreamObserver } from '@eigenspace/base-http-client';
 
 export class NodejsProviderResponse<T> extends RequestProviderResponse<T, Response> {
 
@@ -17,5 +17,9 @@ export class NodejsProviderResponse<T> extends RequestProviderResponse<T, Respon
 
     protected async blob(): Promise<Blob> {
         return this.nativeResponse.blob();
+    }
+
+    protected async observer(): Promise<StreamObserver> {
+        return new StreamObserver(this.nativeResponse.body);
     }
 }
