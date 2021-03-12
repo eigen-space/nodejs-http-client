@@ -40,10 +40,10 @@
   resolved "https://registry.yarnpkg.com/@eigenspace/argument-parser/-/argument-parser-1.0.4.tgz#9c51fc5bfca474c98841942ed8440864cd455323"
   integrity sha512-uqlYKbicmfu2B8yB+MC8b7OdhGBQYSaDy6hmfRKWZ6uFOy4dD+ysvOzgrNeFgR1BPNitLhBcsTrekyQuYx07Aw==
 
-"@eigenspace/base-http-client@1.0.10":
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/@eigenspace/base-http-client/-/base-http-client-1.0.10.tgz#8f021085e05a44ef512bac8c76d932c50f637608"
-  integrity sha512-Hwc7KXiX2AJ28FNygW4TvL+N26yhLGi1/GcAN/U6t6UMBTDf2HjhZjf+BraPF8AMTUkXiAs9wh0CmPzpTVWlfA==
+"@eigenspace/base-http-client@1.0.11":
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/@eigenspace/base-http-client/-/base-http-client-1.0.11.tgz#c73500ad7331998f6306d29ed444ccf0bb866457"
+  integrity sha512-jrYbMsirMB9xrZigZrszqZliGXw9nSgNJ7QuRc7RUWEyTQO1JP05H2xbBz0ZUt3fousEIi++ydup06tOLMhlJw==
   dependencies:
     "@eigenspace/logger" "1.0.8"
     "@eigenspace/url-replacer" "1.0.2"
