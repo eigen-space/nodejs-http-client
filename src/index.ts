@@ -4,5 +4,6 @@ export {
     QueryProvider,
     BaseHttpClientDecorator,
     UrlProcessor,
-    Blob
+    Blob,
+    StreamObserver
 } from '@eigenspace/base-http-client';
