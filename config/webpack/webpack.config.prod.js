@@ -2,6 +2,7 @@ const path = require('path');
 const fs = require('fs');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const nodeExternals = require('webpack-node-externals');
 
 const packageJson = fs.readFileSync(path.join(__dirname, '../../package.json'), 'utf8');
 const libraryName = JSON.parse(packageJson).name;
@@ -20,6 +21,9 @@ module.exports = {
     resolve: {
         extensions: ['.ts', '.js']
     },
+    optimization: {
+        minimize: false
+    },
     output: {
         filename: 'index.js',
         publicPath: '/',
@@ -27,6 +31,7 @@ module.exports = {
         library: libraryName,
         libraryTarget: 'commonjs2'
     },
+    externals: [nodeExternals()],
     plugins: [
         new CleanWebpackPlugin(),
         new CopyWebpackPlugin([{ from: 'package.json', to: 'package.json' }]),
