@@ -7,6 +7,7 @@ This is a nodejs adaptor for @eigenspace/base-http-client.
 * `@eigenspace/base-http-client` - is used like base http client to wrap it.
 * `form-data` - is used for sending multipart data.
 * `node-fetch` - is used as request provider.
+* `json-bigint` - is used to parse json contains bigint type values.
 
 # Why do we have that dev dependencies?
 
@@ -25,3 +26,4 @@ This is a nodejs adaptor for @eigenspace/base-http-client.
 * `webpack` - it creates app bundle for dev. mode and production.
 * `copy-webpack-plugin` - used for copying mocks to dev server.
 * `webpack-cli` - cli for webpack, provides commands for tasks.
+* `webpack-node-externals` - to exclude dependencies from bundle.
