@@ -44,8 +44,9 @@
         ]
     },
     "dependencies": {
-        "@eigenspace/base-http-client": "1.0.11",
+        "@eigenspace/base-http-client": "1.0.15",
         "form-data": "3.0.0",
+        "json-bigint": "1.0.0",
         "node-fetch": "2.6.1"
     },
     "devDependencies": {
@@ -53,6 +54,7 @@
         "@eigenspace/commit-linter": "latest",
         "@eigenspace/common-types": "0.0.20",
         "@eigenspace/helper-scripts": "3.0.7",
+        "@types/json-bigint": "1.0.1",
         "@types/node-fetch": "2.5.7",
         "clean-webpack-plugin": "2.0.2",
         "copy-webpack-plugin": "4.6.0",
@@ -63,6 +65,7 @@
         "ts-loader": "6.2.1",
         "typescript": "3.8.2",
         "webpack": "4.32.0",
-        "webpack-cli": "4.2.0"
+        "webpack-cli": "4.2.0",
+        "webpack-node-externals": "3.0.0"
     }
 }
