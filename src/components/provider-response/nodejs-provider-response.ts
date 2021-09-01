@@ -1,6 +1,6 @@
 import { Blob, Response } from 'node-fetch';
 import { ContentType, HttpStatusCode, RequestProviderResponse, StreamObserver } from '@eigenspace/base-http-client';
-import { parse } from 'json-bigint';
+import JsonBigInt from 'json-bigint';
 
 export class NodejsProviderResponse<T> extends RequestProviderResponse<T, Response> {
 
@@ -14,7 +14,8 @@ export class NodejsProviderResponse<T> extends RequestProviderResponse<T, Respon
 
     protected async json(): Promise<T> {
         const text = await this.nativeResponse.text();
-        return parse(text);
+        const jsonParser = JsonBigInt({ useNativeBigInt: true });
+        return jsonParser.parse(text);
     }
 
     protected async blob(): Promise<Blob> {
