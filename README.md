@@ -5,6 +5,7 @@ This is a nodejs adaptor for @eigenspace/base-http-client.
 # Why do we have that dependencies?
 
 * `@eigenspace/base-http-client` - is used like base http client to wrap it.
+* `@eigenspace/url-replacer` - is used to replace params inside a template url.
 * `form-data` - is used for sending multipart data.
 * `node-fetch` - is used as request provider.
 * `json-bigint` - is used to parse json contains bigint type values.
